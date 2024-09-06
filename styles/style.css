@@ -15,6 +15,10 @@
 */
 
 .page {
+  color: var(--acsent-color);
+  font-family: var(--main-font, "Inter-Variable", Helvetica, sans-serif);
+  background-color: var(--background-color);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--text-weight, 400);
 }
