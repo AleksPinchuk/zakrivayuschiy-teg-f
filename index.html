@@ -18,7 +18,11 @@
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header section">
+      <div class="header-logo">
+        <h1 class="header-logo-title">&lt/html&gt</h1>
+        <h2 class="header-logo-text">закрывающий тег</h2>
+      </div>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -45,7 +49,24 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="cards section">
+      <article class="card-item">
+        <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+        <img class="card-image" src="./images/card1.png" alt="Фургон стоит в лесу ночью"/>
+        <p class="card-text">
+          Это было самое начало пути. На этом этапе важно было проникнуться
+          основами и настроиться на учёбу. И, возможно, подумать, как новые
+          знания могут повлиять на ваше будущее.
+        </p>
+        <p class="card-text"> 
+          Место для ваших воспоминаний о начале обучения.
+        </p>
+        <button><span>Like</span></button>
+      </article>
+    </main>
+    <footer class="footer section">
+      <button>Сохранить на память</button>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
