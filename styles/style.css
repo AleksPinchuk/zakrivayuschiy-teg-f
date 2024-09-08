@@ -27,4 +27,43 @@
   font-variation-settings: "wght" var(--text-weight, 400);
 }
 
+.section {
+  margin: 0 auto;
+}
 
+.header {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-logo-title {
+  font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
+  font-size: 65px;
+  font-weight: var(--text-weight);
+  line-height: 65px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.header-logo-text {
+  font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
+  font-size: 23px;
+  font-weight: var(--text-weight);
+  line-height: 23px;
+  text-align: left;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
