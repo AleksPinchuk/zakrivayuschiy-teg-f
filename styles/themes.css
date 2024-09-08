@@ -70,7 +70,7 @@
     --acsent-color: #000;
     --bg-color: #e7e7e7;
     --line-color: #d3d3d3;
-    --bg-gradient: linear-gradient( #e7e7e7 0.01%, #1a1a1a 100%);
+    --bg-gradient: linear-gradient( #e7e7e7 0, #1a1a1a 100%);
     --line-color-horizontal: repeating-linear-gradient(
       to right,
       var(--line-color) 0px,
@@ -96,7 +96,7 @@
     --acsent-color: rgb(0, 204, 20);
     --bg-color: #1a1a1a;
     --line-color: #000;
-    --bg-gradient: linear-gradient( #007f0c 0.01%, #004306 100%);
+    --bg-gradient: linear-gradient( #007f0c 0, #004306 100%);
     --line-color-horizontal: repeating-linear-gradient(
       to right,
       var(--line-color) 0px,
