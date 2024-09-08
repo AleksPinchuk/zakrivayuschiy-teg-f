@@ -4,7 +4,7 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
-:root.theme-light {
+:root .theme-light {
   --text-weight: 400;
   --title-weight: 700;
   --background-color: #fff;
@@ -28,7 +28,7 @@
   );
 }
 
-:root.theme-dark {
+:root .theme-dark {
   --text-weight: 465;
   --title-weight: 785;
   --background-color: #000;
