@@ -4,12 +4,11 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
-:root .theme-light {
+:root.theme-light {
   --text-weight: 400;
   --title-weight: 700;
   --background-color: #fff;
   --acsent-color: #000;
-  --bg-color: #e7e7e7;
   --line-color: #d3d3d3;
   --bg-gradient: linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
   --line-color-horizontal: repeating-linear-gradient(
@@ -28,12 +27,11 @@
   );
 }
 
-:root .theme-dark {
+:root.theme-dark {
   --text-weight: 465;
   --title-weight: 785;
   --background-color: #000;
   --acsent-color: rgb(0, 204, 20);
-  --bg-color: #1a1a1a;
   --line-color: #000;
   --bg-gradient: linear-gradient( #007f0c, #004306);
   --line-color-horizontal: repeating-linear-gradient(
@@ -68,7 +66,6 @@
     --title-weight: 700;
     --background-color: #fff;
     --acsent-color: #000;
-    --bg-color: #e7e7e7;
     --line-color: #d3d3d3;
     --bg-gradient: linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
     --line-color-horizontal: repeating-linear-gradient(
@@ -94,7 +91,6 @@
     --title-weight: 785;
     --background-color: #000;
     --acsent-color: rgb(0, 204, 20);
-    --bg-color: #1a1a1a;
     --line-color: #000;
     --bg-gradient: linear-gradient(#007f0c, #004306);
     --line-color-horizontal: repeating-linear-gradient(
