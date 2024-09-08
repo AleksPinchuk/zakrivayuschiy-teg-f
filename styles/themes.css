@@ -9,15 +9,23 @@
   --title-weight: 700;
   --background-color: #fff;
   --acsent-color: #000;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --text-weight: 465;
-    --title-weight: 785;
-    --background-color: #fff;
-    --acsent-color: #000;
-  }
+  --bg-color: #e7e7e7;
+  --line-color: #d3d3d3;
+  --bg-gradient: linear-gradient( #e7e7e7 0.01%, #1a1a1a 100%);
+  --line-color-horizontal: repeating-linear-gradient(
+    to right,
+    var(--line-color) 0px,
+    var(--line-color) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  --line-color-vertical: repeating-linear-gradient(
+    to bottom,
+    var(--line-color) 0px,
+    var(--line-color) 2px,
+    transparent 2px,
+    transparent 4px
+  );
 }
 
 :root.theme-dark {
@@ -25,13 +33,84 @@
   --title-weight: 785;
   --background-color: #000;
   --acsent-color: rgb(0, 204, 20);
+  --bg-color: #1a1a1a;
+  --line-color: #000;
+  --bg-gradient: linear-gradient( #007f0c 0.01%, #004306 100%);
+  --line-color-horizontal: repeating-linear-gradient(
+    to right,
+    var(--line-color) 0px,
+    var(--line-color) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  --line-color-vertical: repeating-linear-gradient(
+    to bottom,
+    var(--line-color) 0px,
+    var(--line-color) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+}
+
+.page {
+  background-image: 
+    var(--line-color-horizontal),
+    var(--line-color-vertical),
+    var(--bg-gradient);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Поддержка предпочтений пользователя по схеме цветовой темы */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-weight: 400;
+    --title-weight: 700;
+    --background-color: #fff;
+    --acsent-color: #000;
+    --bg-color: #e7e7e7;
+    --line-color: #d3d3d3;
+    --bg-gradient: linear-gradient( #e7e7e7 0.01%, #1a1a1a 100%);
+    --line-color-horizontal: repeating-linear-gradient(
+      to right,
+      var(--line-color) 0px,
+      var(--line-color) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    --line-color-vertical: repeating-linear-gradient(
+      to bottom,
+      var(--line-color) 0px,
+      var(--line-color) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-weight: 400;
-    --title-weight: 700;
+    --text-weight: 465;
+    --title-weight: 785;
     --background-color: #000;
     --acsent-color: rgb(0, 204, 20);
+    --bg-color: #1a1a1a;
+    --line-color: #000;
+    --bg-gradient: linear-gradient( #007f0c 0.01%, #004306 100%);
+    --line-color-horizontal: repeating-linear-gradient(
+      to right,
+      var(--line-color) 0px,
+      var(--line-color) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    --line-color-vertical: repeating-linear-gradient(
+      to bottom,
+      var(--line-color) 0px,
+      var(--line-color) 2px,
+      transparent 2px,
+      transparent 4px
+    );
   }
 }
+ы

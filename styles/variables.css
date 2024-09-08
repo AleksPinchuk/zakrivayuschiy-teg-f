@@ -6,4 +6,7 @@
   --title-weight: 700;
   --background-color: #fff;
   --acsent-color: #000;
+  --bg-color: #e7e7e7;
+  --line-color: #d3d3d3;
+  --bg-gradient: linear-gradient(0.01% #e7e7e7, #1a1a1a);
 }
