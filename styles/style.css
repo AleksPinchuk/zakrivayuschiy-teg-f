@@ -29,6 +29,7 @@
 
 .section {
   margin: 0 auto;
+  max-width: calc(700/1440*100%);
 }
 
 .header {
@@ -37,11 +38,13 @@
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  border: 2px solid var(--acsent-color);
 }
 
 .header-logo {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
