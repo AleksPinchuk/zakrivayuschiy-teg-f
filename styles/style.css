@@ -15,7 +15,7 @@
 */
 
 .page {
-  color: var(--acsent-color);
+  color: var(--accent-color);
   font-family: var(--main-font, "Inter-Variable", Helvetica, sans-serif);
   background-color: var(--background-color);
   background-image: var(--line-color-horizontal), var(--line-color-vertical),
@@ -40,7 +40,7 @@
   align-items: center;
   gap: 25px;
   margin-top: 100px;
-  border: 2px solid var(--acsent-color);
+  border: 2px solid var(--accent-color);
   background-color: var(--background-color);
 }
 
@@ -74,24 +74,67 @@
 }
 
 .theme-menu__button {
+  position: relative;
   border: none;
   font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
   background-color: transparent;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Толщина подчёркивания */
+  background-color: var(--accent-color, #000); /* Цвет подчёркивания */
+  transform: scaleX(0); /* Начальное состояние — не видно */
+  transform-origin: left; /* Начало анимации слева */
+  transition: transform 0.3s ease; /* Плавная анимация для scale */
+}
+
+/* Состояние focus */
+.theme-menu__button:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
+/* Состояние focus-visible */
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:hover {
   opacity: 0.6;
 }
 
 .theme-menu__button:disabled::before {
   content: "▶";
+  position: absolute;
+  left: -20px;
   width: 16px;
   height: 13px;
-  margin-left: -27px;
   opacity: 0.6;
+  animation: move-arrow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes move-arrow {
+  0% {
+    transform: translateX(0); /* Исходное положение стрелки */
+  }
+  100% {
+    transform: translateX(4px); /* Сдвиг на 4 пикселя вправо */
+  }
 }
 
 /* Стили для секции с карточками */
@@ -105,23 +148,23 @@
 }
 
 .card-item {
-  border: 2px solid var(--acsent-color);
+  border: 2px solid var(--accent-color);
   background-color: var(--background-color);
 }
 
 .card-title {
-  /* Фритрек и нулевой спринт: Подготовка к работе */
-  font-variation-settings: "wght" var(--title-weight, 700);
   padding: 3px 10px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
+  /* Фритрек и нулевой спринт: Подготовка к работе */
+  font-variation-settings: "wght" var(--title-weight, 700);
 }
 
 .card-text {
+  margin: 25px 25px 27px;
   font-size: 18px;
   line-height: 21px;
-  margin: 25px 25px 27px;
 }
 
 .card-text:last-of-type {
@@ -130,24 +173,102 @@
 
 .card-image {
   width: 100%;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.card-image-container {
+  position: relative;
+}
+
+.card-label {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 1;
+  padding: 5px 10px;
+  opacity: 0.5;
+  font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
+  font-size: 14px;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 var(--label-stroke), 1px -1px 0 var(--label-stroke),
+    -1px 1px 0 var(--label-stroke), 1px 1px 0 var(--label-stroke);
+  mix-blend-mode: hard-light; /* режим смешивания */
+}
+
+@supports (-webkit-text-stroke: 1px) {
+  .card-label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--label-stroke);
+    text-stroke: 1px var(--label-stroke);
+  }
 }
 
 .card-buttons {
-  margin: 25px 25px;
   display: flex;
-  gap: 12px;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin: 25px 25px;
 }
 
+
+/* Кнопкии */
 .button {
-font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
-font-weight: var(--text-weight);
-font-size: 14px;
-line-height: 90%;
-text-align: left;
-background-color: transparent;
+  position: relative;
+  border-color: var(--accent-color, #000);
+  font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
+  font-weight: var(--text-weight);
+  font-size: 14px;
+  line-height: 90%;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden; /* Важно для работы псевдоэлемента */
+  color: var(--button-text-color); /* Начальный цвет текста */
+  background-color: var(--button-bg-color); /* Начальный цвет фона */
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
+
+.button:hover {
+  outline: none;
+  color: var(--button-bg-color); /* Меняем цвет текста на цвет фона */
+  background-color: var(--button-text-color); /* Меняем цвет фона на цвет текста */
+  box-shadow: 2px 2px 0 var(--button-text-color);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--button-text-color); /* Цвет перекрытия */
+  transform: scaleX(0); /* Начальное состояние */
+  transform-origin: left; /* Точка начала трансформации */
+  transition: transform 0.5s ease-in-out; /* Плавная анимация */
+  mix-blend-mode: difference;
+  z-index: 1;
+}
+
+.button:hover::before {
+  transform: scaleX(1); /* Плавное появление слева направо */
+}
+
+
+/* Текст и иконка */
+.button__text,
+.icon {
+  position: relative;
+  z-index: 2; /* Текст и иконка выше псевдоэлемента */
+  transition: color 0.5s ease-in-out;
+}
+
+.button:hover .button__text,
+.button:hover .icon {
+  color: var(--background-color); /* Цвет текста изменяется при ховере */
+}
+
 
 .card__like-button {
   padding: 12.5px 37px;
@@ -155,18 +276,30 @@ background-color: transparent;
 
 .card__icon-button {
   border: none;
+  background: var(--background-color);
+  position: relative;
 }
 
 /* Стили для футтера */
 .footer {
-  margin-bottom: 100px;
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .footer-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+  color: var(--accent-color);
   background-color: var(--background-color);
-  padding: 18.5px 21px;
+}
+
+.icon {
+  width: 29px;
+  height: 28px;
+  color: var(--accent-color);
 }
 
 /* Медиазапрос для мобильной версии */
@@ -174,5 +307,9 @@ background-color: transparent;
   /* Стили при ширине окна просмотра <= 375px  */
   .section {
     max-width: 100vw;
+  }
+
+  .footer-button {
+    flex-direction: column;
   }
 }

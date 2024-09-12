@@ -5,5 +5,8 @@
   --text-weight: 400;
   --title-weight: 700;
   --background-color: #fff;
-  --acsent-color: #000;
+  --accent-color: #000;
+  --label-stroke: #fff; 
+  --button-text-color: #000; /* Чёрный текст */
+  --button-bg-color: #fff; /* Белый фон */
 }

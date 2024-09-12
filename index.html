@@ -54,11 +54,15 @@
         <h2 class="card-title">
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
-        <img
-          class="card-image"
-          src="./images/card1.png"
-          alt="Фургон стоит в лесу ночью"
-        />
+        <div class="card-image-container">
+          <p class="card-label">&lt/html&gt</p>
+          <img
+            class="card-image"
+            src="./images/card1.png"
+            alt="Фургон стоит в лесу ночью"
+          />
+        </div>
+
         <p class="card-text">
           Это было самое начало пути. На этом этапе важно было проникнуться
           основами и настроиться на учёбу. И, возможно, подумать, как новые
@@ -66,7 +70,7 @@
         </p>
         <p class="card-text">Место для ваших воспоминаний о начале обучения.</p>
         <div class="card-buttons">
-          <button class="card__icon-button button">
+          <button class="card__icon-button">
             <svg
               class="like-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +112,10 @@
     </main>
     <footer class="footer section">
       <button class="footer-button button">
-        <span class="button__texts">Сохранить на память</span>
+        <svg class="icon" viewBox="0 0 29 28">
+          <use xlink:href="./svg/floppy.svg#dicket"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
       </button>
     </footer>
     <script src="./scripts/like.js"></script>
