@@ -16,16 +16,16 @@
 
 /* Основные стили для страницы */
 .page {
-  color: var(--accent-color);
+  color: var(--accent-color, #000);
   font-family: var(--main-font, "Inter-Variable", Helvetica, sans-serif);
-  background-color: var(--background-color);
+  background-color: var(--background-color, #fff);
   background-image: var(--line-color-horizontal), var(--line-color-vertical),
     var(--bg-color); /* Фоновое изображение и линии */
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" var(--text-weight); /* Использование настройки веса шрифта */
+  font-variation-settings: "wght" var(--text-weight, 400); /* Использование настройки веса шрифта */
 }
 
 /* Общие стили для разделов */
@@ -42,8 +42,8 @@
   align-items: center;
   gap: 25px;
   margin-top: 100px;
-  border: 2px solid var(--accent-color); /* Рамка хедера */
-  background-color: var(--background-color);
+  border: 2px solid var(--accent-color, #000); /* Рамка хедера */
+  background-color: var(--background-color, #fff);
 }
 
 /* Логотип и его текст */
@@ -62,7 +62,7 @@
 .header-logo-title,
 .header-logo-text {
   font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
-  font-weight: var(--text-weight);
+  font-weight: var(--text-weight, 400);
   text-transform: uppercase;
 }
 
@@ -97,8 +97,8 @@
   position: relative;
   width: 100%; /* Кнопка растягивается по ширине */
   border: none;
-  font-family: var(--accent-font);
-  font-weight: var(--text-weight);
+  font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
+  font-weight: var(--text-weight, 400);
   font-size: 14px;
   text-align: left;
   text-transform: uppercase;
@@ -114,7 +114,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--accent-color); /* Линия под кнопкой */
+  background-color: var(--accent-color, #000); /* Линия под кнопкой */
   transition: transform 0.3s ease; /* Анимация появления линии */
   transform: scaleX(0); /* Линия скрыта */
   transform-origin: left; /* Начало анимации слева */
@@ -157,8 +157,8 @@
 
 /* Карточки с изображениями и текстом */
 .card-item {
-  border: 2px solid var(--accent-color);
-  background-color: var(--background-color);
+  border: 2px solid var(--accent-color, #000);
+  background-color: var(--background-color, #fff);
 }
 
 .card-title,
@@ -171,7 +171,7 @@
 
 /* Использование настройки веса шрифта */
 .card-title {
-  font-variation-settings: "wght" var(--title-weight);
+  font-variation-settings: "wght" var(--title-weight, 700);
 }
 
 .card-image-container {
@@ -180,8 +180,8 @@
 
 .card-image {
   width: 100%;
-  border-top: 2px solid var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
+  border-top: 2px solid var(--accent-color, #000);
+  border-bottom: 2px solid var(--accent-color, #000);
   background-position: center;
   background-size: cover;
   aspect-ratio: 1;
@@ -228,8 +228,8 @@
   right: 25px;
   z-index: 1; /*  Выносим на первый план  */
   opacity: 0.5;
-  font-family: var(--accent-font);
-  font-weight: var(--text-weight);
+  font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
+  font-weight: var(--text-weight, 400);
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: -1px -1px 0 var(--label-stroke), 1px -1px 0 var(--label-stroke),
@@ -255,14 +255,14 @@
 /* Общие стили для кнопок */
 .button {
   position: relative;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #000);
   padding: 10px 20px;
   overflow: hidden;
-  color: var(--button-text-color);
-  font-family: var(--accent-font);
-  font-weight: var(--text-weight);
+  color: var(--button-text-color, #000);
+  font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
+  font-weight: var(--text-weight, 400);
   font-size: 14px;
-  background-color: var(--button-bg-color);
+  background-color: var(--button-bg-color, #fff);
   transition: background-color 0.5s ease, color 0.5s ease; /* Плавная смена фона и текста */
   cursor: pointer;
 }
@@ -275,7 +275,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--button-text-color); /* Заливка фона */
+  background-color: var(--button-text-color, #000); /* Заливка фона */
   transition: transform 0.5s ease; /* Плавная заливка */
   transform: scaleX(0); /* Начальное состояние заливки */
   transform-origin: left;
@@ -286,8 +286,8 @@
 }
 
 .button:hover {
-  color: var(--button-bg-color);
-  background-color: var(--button-text-color);
+  color: var(--button-bg-color ,#fff);
+  background-color: var(--button-text-color, #000);
 }
 
 /* Тень на кнопке при фокусе */
@@ -296,12 +296,12 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
 }
 
 /* Цвет текста при наведении на кнопку */
 .button:hover .button__text {
-  color: var(--button-bg-color);
+  color: var(--button-bg-color, #fff);
 }
 
 .button__text {
@@ -312,12 +312,12 @@
 .icon {
   position: relative;
   z-index: 2;
-  color: var(--accent-color);
+  color: var(--accent-color, #000);
   transition: color 0.5s ease-in-out;
 }
 
 .button:hover .icon {
-  color: var(--background-color);
+  color: var(--background-color, #fff);
 }
 
 /* Стили для кнопок "Нравится" и "Сохранить" на карточках */
@@ -330,7 +330,7 @@
   position: relative;
   border: none;
   overflow: hidden;
-  background-color: var(--background-color);
+  background-color: var(--background-color,#fff);
   cursor: pointer;
 }
 
@@ -341,7 +341,7 @@
 
 /* Стили для фокуса с видимостью */
 .card__icon-button:focus-visible {
-  border-color: var(--accent-color);
+  border-color: var(--accent-color, #000);
 }
 
 /* Футер */
@@ -357,18 +357,18 @@
   align-items: center;
   gap: 8px;
   padding: 15px 20px;
-  color: var(--accent-color);
-  background-color: var(--background-color);
+  color: var(--accent-color, #000);
+  background-color: var(--background-color, #fff);
 }
 
 /* Стили для диалога */
 .save-dialog {
   display: none; /* Скрыто по умолчанию */
   padding: 30px;
-  color: var(--accent-color);
+  color: var(--accent-color #000);
   font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
-  font-weight: var(--text-weight);
-  background-color: var(--background-color);
+  font-weight: var(--text-weight, 400);
+  background-color: var(--background-color, #fff);
 }
 
 .dialog-text {
