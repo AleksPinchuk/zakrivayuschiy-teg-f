@@ -14,7 +14,8 @@
 
 ## Ссылка на проект
 
-Ссылка на репозиторий github: [Закрывающий тег](https://github.com/AleksPinchuk/zakrivayuschiy-teg-f)
+Ссылка на репозиторий github: [Закрывающий тег](https://github.com/AleksPinchuk/zakrivayuschiy-teg-f) https://github.com/AleksPinchuk/zakrivayuschiy-teg-f
+
 
 Ссылка на сайт github-pages: [Закрывающий тег](https://alekspinchuk.github.io/zakrivayuschiy-teg-f/)
 
