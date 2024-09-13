@@ -80,16 +80,27 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 25px;
+  margin-left: 20px;
+}
+
+.theme-menu__item {
+  display: flex;
+  align-items: center; 
+  width: 100%; 
 }
 
 /* Кнопки переключения тем */
 .theme-menu__button {
   position: relative;
+  width: 100%; /* Кнопка растягивается по ширине */
   border: none;
   font-family: var(--accent-font);
+  font-weight: var(--text-weight);
   font-size: 14px;
+  text-align: left;
   text-transform: uppercase;
   background-color: transparent;
   transition: opacity 0.3s ease; /* Плавная смена прозрачности */
@@ -169,11 +180,11 @@
 
 .card-image {
   width: 100%;
-  background-position: center;
-  aspect-ratio: 1;
-  background-size: cover;
   border-top: 2px solid var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1;
 }
 
 /* Фильтры фотографий */
@@ -215,6 +226,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
+  z-index: 1; /*  Выносим на первый план  */
   opacity: 0.5;
   font-family: var(--accent-font);
   font-weight: var(--text-weight);
@@ -223,7 +235,6 @@
   text-shadow: -1px -1px 0 var(--label-stroke), 1px -1px 0 var(--label-stroke),
     -1px 1px 0 var(--label-stroke), 1px 1px 0 var(--label-stroke); /* Объемный эффект тени */
   mix-blend-mode: hard-light; /* Смешивание для яркости */
-  z-index: 1; /*  Выносим на первый план  */
 }
 
 /* Поддержка обводки текста в WebKit */
@@ -299,9 +310,9 @@
 }
 
 .icon {
-  color: var(--accent-color);
   position: relative;
   z-index: 2;
+  color: var(--accent-color);
   transition: color 0.5s ease-in-out;
 }
 
@@ -352,36 +363,36 @@
 
 /* Стили для диалога */
 .save-dialog {
+  display: none; /* Скрыто по умолчанию */
+  padding: 30px;
+  color: var(--accent-color);
   font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
   font-weight: var(--text-weight);
   background-color: var(--background-color);
-  color: var(--accent-color);
-  display: none; /* Скрыто по умолчанию */
-  padding: 30px;
 }
 
 .dialog-text {
+  max-width: 353px;
   font-size: 14px;
   line-height: 150%;
-  max-width: 353px;
 }
 
 .save-dialog[open] {
-  width: max(calc(100vw * (352 / 1440)), 341px);
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: max(calc(100vw * (352 / 1440)), 341px);
 }
 
 .save-dialog::backdrop {
-  background-color: #000000;
   opacity: 0.75;
+  background-color: #000000;
 }
 
 .dialog-container {
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 20px;
   text-transform: uppercase;
 }
 
