@@ -365,7 +365,7 @@
 .save-dialog {
   display: none; /* Скрыто по умолчанию */
   padding: 30px;
-  color: var(--accent-color #000);
+  color: var(--accent-color, #000);
   font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
   font-weight: var(--text-weight, 400);
   background-color: var(--background-color, #fff);
