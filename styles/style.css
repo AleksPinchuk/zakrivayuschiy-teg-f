@@ -223,6 +223,7 @@
   text-shadow: -1px -1px 0 var(--label-stroke), 1px -1px 0 var(--label-stroke),
     -1px 1px 0 var(--label-stroke), 1px 1px 0 var(--label-stroke); /* Объемный эффект тени */
   mix-blend-mode: hard-light; /* Смешивание для яркости */
+  z-index: 1; /*  Выносим на первый план  */
 }
 
 /* Поддержка обводки текста в WebKit */
