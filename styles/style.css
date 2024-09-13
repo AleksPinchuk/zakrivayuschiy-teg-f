@@ -163,20 +163,61 @@
   font-variation-settings: "wght" var(--title-weight);
 }
 
+.card-image-container {
+  position: relative;
+}
+
 .card-image {
   width: 100%;
+  background-position: center;
+  aspect-ratio: 1;
+  background-size: cover;
   border-top: 2px solid var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
+}
+
+/* Фильтры фотографий */
+/* filters */
+.brightness {
+  filter: brightness(130%);
+}
+
+.contrast {
+  filter: contrast(150%);
+}
+
+.blur {
+  filter: blur(0.3rem);
+}
+
+.opacity {
+  filter: opacity(0.8);
+}
+
+.grayscale {
+  filter: grayscale(0.8);
+}
+
+.saturate {
+  filter: saturate(158%);
+}
+
+.sepia {
+  filter: sepia(80%);
+}
+
+.contrast-sepia {
+  filter: contrast(170%) sepia(90%);
 }
 
 /* Метки на карточках */
 .card-label {
   position: absolute;
-  top: 20px;
-  right: 10px;
-  padding: 5px 10px;
+  top: 25px;
+  right: 25px;
   opacity: 0.5;
   font-family: var(--accent-font);
+  font-weight: var(--text-weight);
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: -1px -1px 0 var(--label-stroke), 1px -1px 0 var(--label-stroke),
@@ -239,8 +280,11 @@
 
 /* Тень на кнопке при фокусе */
 .button:focus {
-  box-shadow: 2px 2px 0 var(--accent-color);
   outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 /* Цвет текста при наведении на кнопку */
@@ -348,6 +392,10 @@
 
   .footer-button {
     flex-direction: column;
+  }
+
+  .card-label {
+    right: 13px;
   }
 
   .save-dialog {

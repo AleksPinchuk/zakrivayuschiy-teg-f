@@ -34,7 +34,7 @@
   --text-weight: 465;
   --title-weight: 785;
   --background-color: #000;
-  --accent-color: rgb(0, 204, 20);
+  --accent-color: #00CC14;
   --line-color: #000;
   --label-stroke: #000;  
   --bg-gradient: linear-gradient( #007f0c, #004306);
@@ -52,7 +52,7 @@
     transparent 2px,
     transparent 4px
   );
-  --button-text-color: rgb(0, 204, 20); /* Акцентный цвет текста */
+  --button-text-color: #00CC14; /* Акцентный цвет текста */
   --button-bg-color: #000; /* Чёрный фон */
 }
 
@@ -99,7 +99,7 @@
     --text-weight: 465;
     --title-weight: 785;
     --background-color: #000;
-    --accent-color: rgb(0, 204, 20);
+    --accent-color: #00CC14;
     --line-color: #000;
     --label-stroke: #000;
     --bg-gradient: linear-gradient(#007f0c, #004306);
@@ -117,7 +117,7 @@
       transparent 2px,
       transparent 4px
     );
-    --button-text-color: rgb(0, 204, 20); /* Акцентный цвет текста */
+    --button-text-color: #00CC14; /* Акцентный цвет текста */
     --button-bg-color: #000; /* Чёрный фон */
   }
 }
