@@ -10,7 +10,7 @@
   --background-color: #fff;
   --accent-color: #000;
   --line-color: #d3d3d3;
-  --label-stroke: #fff;  
+  --label-stroke: #fff;
   --bg-gradient: linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
   --line-color-horizontal: repeating-linear-gradient(
     to right,
@@ -34,10 +34,10 @@
   --text-weight: 465;
   --title-weight: 785;
   --background-color: #000;
-  --accent-color: #00CC14;
+  --accent-color: #00cc14;
   --line-color: #000;
-  --label-stroke: #000;  
-  --bg-gradient: linear-gradient( #007f0c, #004306);
+  --label-stroke: #000;
+  --bg-gradient: linear-gradient(#007f0c, #004306);
   --line-color-horizontal: repeating-linear-gradient(
     to right,
     var(--line-color) 0px,
@@ -52,14 +52,12 @@
     transparent 2px,
     transparent 4px
   );
-  --button-text-color: #00CC14; /* Акцентный цвет текста */
+  --button-text-color: #00cc14; /* Акцентный цвет текста */
   --button-bg-color: #000; /* Чёрный фон */
 }
 
 .page {
-  background-image: 
-    var(--line-color-horizontal),
-    var(--line-color-vertical),
+  background-image: var(--line-color-horizontal), var(--line-color-vertical),
     var(--bg-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -73,7 +71,7 @@
     --background-color: #fff;
     --accent-color: #000;
     --line-color: #d3d3d3;
-    --label-stroke: #fff;  
+    --label-stroke: #fff;
     --bg-gradient: linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
     --line-color-horizontal: repeating-linear-gradient(
       to right,
@@ -99,7 +97,7 @@
     --text-weight: 465;
     --title-weight: 785;
     --background-color: #000;
-    --accent-color: #00CC14;
+    --accent-color: #00cc14;
     --line-color: #000;
     --label-stroke: #000;
     --bg-gradient: linear-gradient(#007f0c, #004306);
@@ -117,7 +115,7 @@
       transparent 2px,
       transparent 4px
     );
-    --button-text-color: #00CC14; /* Акцентный цвет текста */
+    --button-text-color: #00cc14; /* Акцентный цвет текста */
     --button-bg-color: #000; /* Чёрный фон */
   }
 }
