@@ -20,7 +20,7 @@
   font-family: var(--main-font, "Inter-Variable", Helvetica, sans-serif);
   background-color: var(--background-color, #fff);
   background-image: var(--line-color-horizontal), var(--line-color-vertical),
-    var(--bg-color); /* Фоновое изображение и линии */
+    var(--bg-gradient);
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -88,8 +88,8 @@
 
 .theme-menu__item {
   display: flex;
-  align-items: center; 
-  width: 100%; 
+  align-items: center;
+  width: 100%;
 }
 
 /* Кнопки переключения тем */
@@ -286,7 +286,7 @@
 }
 
 .button:hover {
-  color: var(--button-bg-color ,#fff);
+  color: var(--button-bg-color, #fff);
   background-color: var(--button-text-color, #000);
 }
 
@@ -330,7 +330,7 @@
   position: relative;
   border: none;
   overflow: hidden;
-  background-color: var(--background-color,#fff);
+  background-color: var(--background-color, #fff);
   cursor: pointer;
 }
 

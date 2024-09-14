@@ -56,13 +56,6 @@
   --button-bg-color: #000; /* Чёрный фон */
 }
 
-.page {
-  background-image: var(--line-color-horizontal), var(--line-color-vertical),
-    var(--bg-gradient);
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 /* Поддержка предпочтений пользователя по схеме цветовой темы */
 @media (prefers-color-scheme: light) {
   :root {
