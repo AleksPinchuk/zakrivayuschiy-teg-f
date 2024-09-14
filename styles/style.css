@@ -170,19 +170,15 @@
   font-weight: var(--title-weight, 700);
   font-size: 18px;
   line-height: 22px;
+  font-variation-settings: "wght" var(--title-weight, 700);
 }
 
 .card-text {
   padding: 0 25px;
-  font-weight: var(--text-weight, 400);
+  font-variation-settings: "wght" var(--text-weight, 400);
   font-size: 18px;
   line-height: 22px;
   margin-top: 23px;
-}
-
-/* Использование настройки веса шрифта */
-.card-title {
-  font-variation-settings: "wght" var(--title-weight, 700);
 }
 
 .card-image-container {
