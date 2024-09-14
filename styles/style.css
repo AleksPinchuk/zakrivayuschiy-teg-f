@@ -388,7 +388,7 @@
 }
 
 /* Медиазапросы для адаптации на малых экранах */
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .section {
     max-width: 100vw;
   }
