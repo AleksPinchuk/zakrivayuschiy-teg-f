@@ -9,5 +9,6 @@
   --label-stroke: #fff;
   --button-text-color: #000; /* Чёрный текст */
   --button-bg-color: #fff; /* Белый фон */
+  --button-text-change: #fff;
   --active-color: #ff0000;
 }

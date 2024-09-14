@@ -28,6 +28,7 @@
   );
   --button-text-color: #000; /* Чёрный текст */
   --button-bg-color: #fff; /* Белый фон */
+  --button-text-change: #fff;
 }
 
 :root.theme-dark {
@@ -54,6 +55,7 @@
   );
   --button-text-color: #00cc14; /* Акцентный цвет текста */
   --button-bg-color: #000; /* Чёрный фон */
+  --button-text-change: #00cc14;
 }
 
 /* Поддержка предпочтений пользователя по схеме цветовой темы */
@@ -82,6 +84,7 @@
     );
     --button-text-color: #000; /* Чёрный текст */
     --button-bg-color: #fff; /* Белый фон */
+    --button-text-change: #fff;
   }
 }
 
@@ -110,5 +113,6 @@
     );
     --button-text-color: #00cc14; /* Акцентный цвет текста */
     --button-bg-color: #000; /* Чёрный фон */
+    --button-text-change: #00cc14;
   }
 }
