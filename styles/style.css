@@ -371,7 +371,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: max(calc(100vw * (352 / 1440)), 341px);
+  width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
 }
 
 .save-dialog::backdrop {
@@ -382,7 +382,7 @@
 .dialog-container {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   text-transform: uppercase;
 }
 
