@@ -96,7 +96,7 @@
 /* Кнопки переключения тем */
 .theme-menu__button {
   position: relative;
-  width: 100%; /* Кнопка растягивается по ширине */
+  max-width: min-content;
   border: none;
   font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
   font-weight: var(--text-weight, 400);
@@ -256,6 +256,7 @@
   display: flex;
   justify-content: flex-end;
   margin: 25px;
+  gap: 6px;
 }
 
 /* Общие стили для кнопок */
@@ -324,6 +325,7 @@
   background-color: var(--background-color, #fff);
   cursor: pointer;
   transition: border 0.3s ease;
+  padding: 0;
 }
 
 /* Кнопка с сердечком */
@@ -355,7 +357,7 @@
   font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
   font-weight: var(--text-weight, 400);
   background-color: var(--background-color, #fff);
-  margin: auto;
+  margin: 384.5px auto;
 }
 
 .dialog-text {
@@ -393,7 +395,7 @@
     max-width: 100vw;
   }
 
-  .footer-button {
+  .save-button {
     flex-direction: column;
   }
 
@@ -407,6 +409,7 @@
   }
 
   .save-dialog {
+    margin: 238px auto;
     padding: 30px 40px;
   }
 }
