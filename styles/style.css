@@ -95,6 +95,7 @@
 
 /* Кнопки переключения тем */
 .theme-menu__button {
+  padding-inline: 0;
   position: relative;
   max-width: min-content;
   border: none;
@@ -361,7 +362,7 @@
 }
 
 .dialog-text {
-  max-width: 353px;
+  max-width: 230px;
   font-size: 14px;
   line-height: 150%;
 }
@@ -381,8 +382,13 @@
 .dialog-container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   text-transform: uppercase;
+}
+
+.dialog-icon {
+  width: 39px;
+  height: 39px;
 }
 
 .close .button__text {
@@ -408,8 +414,17 @@
     margin-top: 25px;
   }
 
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
   .save-dialog {
     margin: 238px auto;
     padding: 30px 40px;
+  }
+
+  .dialog-text {
+    max-width: 196px;
   }
 }
