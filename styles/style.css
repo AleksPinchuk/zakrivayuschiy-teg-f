@@ -358,7 +358,7 @@
   font-family: var(--accent-font, "PressStart2P", Tahoma, sans-serif);
   font-weight: var(--text-weight, 400);
   background-color: var(--background-color, #fff);
-  margin: 384.5px auto;
+  margin: auto;
 }
 
 .dialog-text {
@@ -420,7 +420,6 @@
   }
 
   .save-dialog {
-    margin: 238px auto;
     padding: 30px 40px;
   }
 
